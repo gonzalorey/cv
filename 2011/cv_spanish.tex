@@ -1,0 +1,76 @@
+% LaTeX file for resume 
+% This file uses the resume document class (res.cls)
+
+\documentclass[margin]{res} 
+% the margin option causes section titles to appear to the left of body text 
+\textwidth=5.2in % increase textwidth to get smaller right margin
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+
+\begin{document} 
+
+% Center the name over the entire width of resume:
+ \moveleft.5\hoffset\centerline{\large\bf Gonzalo M. Rey}
+% Draw a horizontal line the whole width of resume:
+ \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+% address begins here
+% Again, the address lines must be centered over entire width of resume:
+ \moveleft.5\hoffset\centerline{Maip\'u 1136}
+ \moveleft.5\hoffset\centerline{Don Bosco, Quilmes (1876)}
+ \moveleft.5\hoffset\centerline{4259 2895 or 15 5818 1797}
+
+ 
+\begin{resume}  
+ 
+\section{Objetivo} 
+Alcanzar una gran experiencia en el desarrollo de software, incrementar mis capacidades de trabajo en equipo
+y mejorar mis performance en todo nivel posible.\\
+
+
+\section{Educaci\'on} 
+{\bf Ingenier\'ia Inform\'atica,} Instituto Tecnol\'ogico de Buenos Aires (ITBA) \hfill 2005 - Hoy
+\begin{itemize} \itemsep -2pt  % reduce space between items
+\item Restan 3 materias y el proyecto final para finalizar la carrera
+\end{itemize}
+
+{\bf General English,} Australian College of English (ACE), Sydney \hfill 2007
+\begin{itemize} \itemsep -2pt  % reduce space between items
+\item Full Time Course con nivel General English, durante enero 2007
+\end{itemize}
+
+{\bf Tecnicatura Electr\'onica,} Escuela T\'ecnica $N^{\circ}$ 2, Quilmes \hfill 2000 - 2005
+
+{\bf First Certificate in English (FCE)} \hfill 2004
+
+{\bf Certificate in Advanced English (CAE)} \hfill 2005
+\begin{itemize} \itemsep -2pt  % reduce space between items
+\item Ex\'amen final pendiente, debido a la priorizaci\'on de la universidad\\
+\end{itemize}
+
+\section{Experiencia}
+ {\bf Analista/Programador,} Redmond Software \hfill Agosto 2007 - Hoy
+ \begin{itemize} \itemsep -2pt  % reduce space between items
+\item Sistemas varios desarrollados en Visual Basic 6.0 y con frameworks .NET 1.1, 2.0, 3.5 y C\# con .NET 1.1
+que interfaceaban con bases de datos Oracle 10g o SQL Server 2005
+\item Migraci\'on completa de una base de datos Informix a una Oracle 10g, y migraciones varias de 
+Oracle 10g a SQL Server 2005\\
+\end{itemize}
+
+
+% Tabulate Computer Skills; p{3in} defines paragraph 3 inches wide
+\section{Habilidades}
+   \begin{tabular}{l p{3in}}
+    \underline{Lenguages:} &  Java (Frameworks como Spring, Hybernate, Wicket), C, Visual Basic, 
+    										Visual Basic .NET (1.1, 2.0 and 3.5), C\#, JavaScript, HTML, Haskell, 
+    										Assembler (Intel x86, ATMega 644 (basado en x86) y Z80), SQL Oracle 8g, 9g, 10g, 
+    										Informix, SQL Server 2005.\\
+	\ & \ \\
+     \underline{Software:} &  TOAD, SQL Server 2005, Visual Studio 6.0, 2003, 2005, 2008.\\
+ \end{tabular}
+\ \\
+ 
+\section{Hobbies} Pescar, tocar la guitarra, escuchar m\'usica y practicar Kick Boxing.\\
+
+\end{resume} 
+\end{document} 
+
