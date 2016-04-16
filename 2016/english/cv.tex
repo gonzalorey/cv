@@ -1,0 +1,178 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+\usepackage{setspace}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Gonzalo Matías Rey
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Place and Date of Birth:} & Buenos Aires, Argentina \ \ |\ \ June 17th, 1987 \\
+    \textsc{Address:}   & Aráoz 2054 7B, Capital Federal \\
+    \textsc{Phone:}     & +54 911 5818 1797\\
+    \textsc{email:}     & \href{mailto:gonzalomatiasrey@gmail.com}{gonzalomatiasrey@gmail.com}
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+
+ \textsc{Jan 2016 - }\emph{Current} & Perito Analista en Informática at \textsc{Poder Judicial de la Nación} \\
+ &\footnotesize{Informatics Specialist giving support on any software related matter that may occur during a trial.}\\
+ 
+ \multicolumn{2}{c}{} \\
+ 
+ \textsc{Jan - Mar 2016} & Architecture Lead at \textsc{OLX} \\
+ &\footnotesize{Managed both the two Software Architects and the QA Lead, with the goal of defining a technological vision for the company, that would ensure that the teams would count with a predictable development process that provides a sustainable value delivery, while helping them grow professionally.}\\
+
+\multicolumn{2}{c}{} \\
+
+\textsc{Sep 2015 - Jan 2016} & Software Architect at \textsc{OLX} \\
+ &\footnotesize{Coordinate the design and interaction of the different components developed by the development teams that focused in different flows of the product, posting, user, search, etc.}\\
+
+\multicolumn{2}{c}{} \\
+
+\textsc{Sep 2014 - Sep 2015} & Backend Software Engineer Lead at \textsc{OLX} \\
+ &\footnotesize{Responsible for a team of six people that developed and maintained the mobile backend components and public API, providing content for all clients, Web and MobileWeb, and iOS and Android apps.}\\
+
+\multicolumn{2}{c}{} \\
+
+\textsc{Mar 2011 - Sep 2014} & Software Engineer at \textsc{OLX} \\
+ &\footnotesize{Worked on the mobile department, developing and maintaining the MobileWeb, partly in HTML5 with jQueryMobile, and PHP in its backend, and also the Java API that connected with the Android and iOS apps. 
+ 
+ Later on, I was part of designing and developing from scratch a new API built in Scala, developed entirely using TDD.}\\
+
+\multicolumn{2}{c}{} \\
+
+\textsc{Aug 2007 - Mar 2011} & Analyst Programmer at \textsc{Redmond Software} \\
+ &\footnotesize{Worked on several .NET VB and C\# projects, building a couple from ground up, and inheriting and maintaining some others.}\\
+
+\multicolumn{2}{c}{} \\
+
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{r|l}	
+ \normalsize 2005 - 2013 & Informatics Engineer, \textbf{Instituto Tecnológico de Buenos Aires}\\
+& Major: \small Computational Intelligence \\
+& Thesis: \small ``ItBot2: Autonomous Robot for R\&D'' |  Advisor: Dr. Juan Miguel \textsc{Santos}\\
+
+\multicolumn{2}{c}{} \\
+
+\normalsize \textsc{Jan} 2007 & General English, \textbf{Australian College of English (ACE)}, Sydney\\
+& \small Full Time Course with General English level \\
+
+\multicolumn{2}{c}{} \\
+
+\normalsize \textsc{Mar - Dec} 2005 & Certificate in Advanced English (CAE), \textbf{American Way}\\
+& \small Final exam pending \\
+
+\multicolumn{2}{c}{} \\
+
+\normalsize \textsc{Dec} 2004 & First Certificate in English (FCE), \textbf{American Way}\\
+
+\multicolumn{2}{c}{} \\
+
+2000 - 2004 & Electronics Technician, \normalsize\textbf{Escuela Técnica N$^{\circ}$2 Paula Albarracín de Sarmiento}\\
+
+\end{tabular}
+
+%Section: Skills
+\section{Skills \& Technologies}
+\begin{tabular}{rl}
+ Advanced Knowledge: & \textsc{Scala} (with Play Framework), \textsc{Java}, \textsc{C\#} (with .NET), \textsc{TDD} \\
+Intermediate Knowledge: & JavaScript (with JQuery Mobile), PHP, C, VB \& VB.NET, Jenkins, GIT \\
+Basic Knowledge: & MySQL, MongoDB, Oracle, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}, Docker, Nginx, Varnish, Graphite
+\end{tabular}
+
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+ \textsc{Spanish:} & Mothertongue\\
+\textsc{English:} & Full professional proficiency\\
+\textsc{Portuguese:} & Elementary proficiency\\
+\end{tabular}
+
+%Section: Interests and Activities
+\section{Interests and Activities}
+\onehalfspacing{Technology and geeky science stuff.\\
+Running \& trail-running, dancing tango and travelling to learn about other cultures.\\}
+
+%\newpage
+%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+
+\end{document}
